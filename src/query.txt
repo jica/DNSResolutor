@@ -1,0 +1,4 @@
+thumbs2.ebaystatic.com.	AAAA
+mountaineerpublishing.com.	MX
+www.mediafire.com.	A
+243.35.149.83.in-addr.arpa.	PTR
