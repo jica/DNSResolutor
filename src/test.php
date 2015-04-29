@@ -1,5 +1,16 @@
 <?php
-processFile('query.txt');
+class Resolutor extends Thread {
+  public function __construct($hostname, $type){
+    $this->hostname=$hostname;
+    $this->type=$type;
+  }
+
+  public function run(){
+    $resolved = dns_get_record($this->hostname, DNS_A);
+    echo "\n----------\n";
+    print_r($resolved);
+  }
+}
 
 function processFile($filename){
   if(is_file($filename)){
@@ -21,16 +32,6 @@ function readLines($file){
   }
 }
 
-class Resolutor extends Thread {
-  public function __construct($hostname, $type){
-    $this->hostname=$hostname;
-    $this->type=$type
-  }
+processFile('query.txt');
 
-  public function run(){
-    $resolved = dns_get_record($hostname, DNS_PTR);
-    echo "\n----------\n";
-    print_r($resolved);
-  }
-}
 ?>
