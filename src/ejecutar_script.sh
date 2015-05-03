@@ -1,11 +1,10 @@
 #!/bin/bash
-read -p "Introduzca la ruta completa del fichero:" filename
-i=0;
-#for line in $(cat $filename);do
-#  php resolver.php $line
-#  echo $i
-#  i=$i+1
-#done
+if [ -z "$1" ]; then
+  read -p "Introduzca la ruta completa del fichero:" filename
+else
+  filename=$1
+fi
+
 while read line
 do
   ./resolver.sh $line &
