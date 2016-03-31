@@ -13,7 +13,7 @@ directory "#{node['prueba_flexiant']['install_dir']}" do
 end
 
 git "#{node['prueba_flexiant']['install_dir']}" do
-  repository "https://github.com/jica/Prueba.git"
+  repository "https://github.com/jica/DNSResolutor.git"
   reference "master"
   action :sync
 end
